@@ -1,4 +1,4 @@
-package com.nibavs.rabbitmqlearning.routing;
+package com.nibavs.rabbitmqlearning.topics;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

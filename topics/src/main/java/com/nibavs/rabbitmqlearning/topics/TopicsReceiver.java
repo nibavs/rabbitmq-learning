@@ -1,11 +1,11 @@
-package com.nibavs.rabbitmqlearning.routing;
+package com.nibavs.rabbitmqlearning.topics;
 
 import lombok.NoArgsConstructor;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.util.StopWatch;
 
 @NoArgsConstructor
-public class RoutingReceiver {
+public class TopicsReceiver {
 
     @RabbitListener(queues = "#{autoDeleteQueue1.name}")
     public void receive1(String message) throws InterruptedException {
@@ -24,7 +24,7 @@ public class RoutingReceiver {
         System.out.println("instance " + receiver + " [x] Received '" + message + "'");
         doWork(message);
         stopWatch.stop();
-        System.out.println("instance " + receiver + " [x] Done in " + stopWatch.getTotalTimeSeconds() + "s");
+//        System.out.println("instance " + receiver + " [x] Done in " + stopWatch.getTotalTimeSeconds() + "s");
     }
 
     private void doWork(String message) throws InterruptedException {

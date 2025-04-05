@@ -1,6 +1,6 @@
 spring:
   application:
-    name: routing
+    name: topics
   profiles:
     active: usage_message
   rabbitmq:
@@ -14,4 +14,4 @@ logging:
 
 tutorial:
   client:
-    duration: 10000
+    duration: 60000

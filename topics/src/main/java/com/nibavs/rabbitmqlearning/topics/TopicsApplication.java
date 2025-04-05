@@ -1,4 +1,4 @@
-package com.nibavs.rabbitmqlearning.routing;
+package com.nibavs.rabbitmqlearning.topics;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -9,9 +9,9 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
 @EnableScheduling
-public class RoutingApplication {
+public class TopicsApplication {
 	public static void main(String[] args) {
-		SpringApplication.run(RoutingApplication.class, args);
+		SpringApplication.run(TopicsApplication.class, args);
 	}
 
 	@Profile("usage_message")

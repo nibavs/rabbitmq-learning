@@ -10,10 +10,10 @@
 	</parent>
 
 	<groupId>com.nibavs.rabbitmqlearning</groupId>
-	<artifactId>routing</artifactId>
+	<artifactId>topics</artifactId>
 	<version>1.0-SNAPSHOT</version>
-	<name>routing</name>
-	<description>Routing in rabbitmq</description>
+	<name>topics</name>
+	<description>Topics in rabbitmq</description>
 
 	<properties>
 		<java.version>17</java.version>
