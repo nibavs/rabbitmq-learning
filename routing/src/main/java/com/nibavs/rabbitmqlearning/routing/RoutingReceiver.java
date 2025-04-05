@@ -1,11 +1,11 @@
-package com.nibavs.rabbitmqlearning.pubsub;
+package com.nibavs.rabbitmqlearning.routing;
 
 import lombok.NoArgsConstructor;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.util.StopWatch;
 
 @NoArgsConstructor
-public class PubSubReceiver {
+public class RoutingReceiver {
 
     @RabbitListener(queues = "#{autoDeleteQueue1.name}")
     public void receive1(String message) throws InterruptedException {

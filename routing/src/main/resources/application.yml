@@ -1,6 +1,6 @@
 spring:
   application:
-    name: pubsub
+    name: routing
   profiles:
     active: usage_message
   rabbitmq:

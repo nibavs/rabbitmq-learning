@@ -10,10 +10,10 @@
 	</parent>
 
 	<groupId>com.nibavs.rabbitmqlearning</groupId>
-	<artifactId>pubsub</artifactId>
+	<artifactId>routing</artifactId>
 	<version>1.0-SNAPSHOT</version>
-	<name>pubsub</name>
-	<description>Publish/subscribe pattern in rabbitmq</description>
+	<name>routing</name>
+	<description>Routing in rabbitmq</description>
 
 	<properties>
 		<java.version>17</java.version>
