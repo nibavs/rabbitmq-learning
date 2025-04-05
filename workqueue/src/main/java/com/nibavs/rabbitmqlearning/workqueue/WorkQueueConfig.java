@@ -5,18 +5,24 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
-@Profile({"hello-world"})
+@Profile({"work-queue"})
 @Configuration
 public class WorkQueueConfig {
     @Bean
-    public Queue hello() {
-        return new Queue("hello");
+    public Queue workQueue() {
+        return new Queue("work-queue");
     }
 
-    @Profile("reciever")
-    @Bean
-    public WorkQueueReceiver reciever() {
-        return new WorkQueueReceiver(1);
+    @Profile("receiver")
+    private static class RecieverConfig {
+        @Bean
+        public WorkQueueReceiver receiver1() {
+            return new WorkQueueReceiver(1);
+        }
+        @Bean
+        public WorkQueueReceiver receiver2() {
+            return new WorkQueueReceiver(2);
+        }
     }
 
     @Profile("sender")

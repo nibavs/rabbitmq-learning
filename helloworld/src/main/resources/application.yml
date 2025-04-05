@@ -1,0 +1,20 @@
+spring:
+  profiles:
+    active: usage_message
+  application:
+    name: helloworld
+  rabbitmq:
+    addresses: localhost:5672
+    username: nibavs
+    password: 23099
+
+
+#server:
+#  port: 8080
+logging:
+  level:
+    com: ERROR
+
+tutorial:
+  client:
+    duration: 10000

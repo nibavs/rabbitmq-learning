@@ -1,4 +1,4 @@
-package com.nibavs.rabbitmqlearning.helloworld;
+package com.nibavs.helloworld;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;

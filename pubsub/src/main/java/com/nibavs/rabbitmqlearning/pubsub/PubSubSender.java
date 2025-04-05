@@ -1,7 +1,6 @@
-package com.nibavs.rabbitmqlearning.workqueue;
+package com.nibavs.rabbitmqlearning.pubsub;
 
-
-import lombok.extern.slf4j.Slf4j;
+import org.springframework.amqp.core.FanoutExchange;
 import org.springframework.amqp.core.Queue;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,13 +8,12 @@ import org.springframework.scheduling.annotation.Scheduled;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
-@Slf4j
-public class WorkQueueSender {
+public class PubSubSender {
     @Autowired
     private RabbitTemplate template;
 
     @Autowired
-    private Queue workQueue;
+    private FanoutExchange fanout;
 
     AtomicInteger count = new AtomicInteger(0);
 
@@ -32,7 +30,7 @@ public class WorkQueueSender {
         }
         builder.append(count.incrementAndGet());
         String message = builder.toString();
-        template.convertAndSend(workQueue.getName(), message);
+        template.convertAndSend(fanout.getName(), "", message);
         System.out.println(" [x] Sent '" + message + "'");
     }
 
