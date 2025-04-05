@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: routing
+  profiles:
+    active: usage_message
+  rabbitmq:
+    addresses: localhost:5672
+    username: nibavs
+    password: 23099
+
+logging:
+  level:
+    com: ERROR
+
+tutorial:
+  client:
+    duration: 10000
