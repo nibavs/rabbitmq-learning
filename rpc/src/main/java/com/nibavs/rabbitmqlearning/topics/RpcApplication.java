@@ -9,9 +9,9 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
 @EnableScheduling
-public class TopicsApplication {
+public class RpcApplication {
 	public static void main(String[] args) {
-		SpringApplication.run(TopicsApplication.class, args);
+		SpringApplication.run(RpcApplication.class, args);
 	}
 
 	@Profile("usage_message")
@@ -20,7 +20,7 @@ public class TopicsApplication {
 		return args -> {
 			System.out.println("This app uses Spring Profiles to control its behavior.\n");
 			System.out.println("Sample usage: java -jar ./target/rabbit-tutorials.jar " +
-					"--spring.profiles.active=routing,sender");
+					"--spring.profiles.active=rpc,sender");
 		};
 	}
 
